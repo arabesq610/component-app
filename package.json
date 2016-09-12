@@ -1,0 +1,13 @@
+{
+    "name": "component-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "author": "Elise <elise_81@yahoo.com>",
+    "license": "ISC",
+    "dependencies": {
+        "angular": "^1.5.8",
+        "lodash": "^4.15.0"
+    }
+}

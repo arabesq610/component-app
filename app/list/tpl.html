@@ -1,0 +1,26 @@
+<h2>{{ vm.text.title }}</h2>
+<p>{{ vm.text.description }}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>weight</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="i in vm.items track by $index">
+            <td>{{ i.title }}</td>
+            <td>
+                <weight-display weight="i.weight">^</weight-display>
+            </td>
+            <td>
+                <span ng-click="vm.decrease(i)">-</span>
+            </td>
+            <td>
+                <span ng-click="vm.increase(i)">+</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
