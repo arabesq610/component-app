@@ -1,5 +1,5 @@
-Install the following packages globally:
------------------------------------------
+Install the following globally
+------------------------------
 * node
 * npm
 * karma
