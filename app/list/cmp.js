@@ -4,7 +4,6 @@
 
     var listConfigValue;
 
-
     listConfigValue = {
         text: {
             title: 'List',
@@ -14,20 +13,16 @@
         max: 5,
         increment: 1,
         items: [{
-            id: 1,
-            title: 'adoration',
+            title: 'Adoration',
             weight: 5
         }, {
-            id: 2,
-            title: 'respect',
+            title: 'Respect',
             weight: 2
         }, {
-            id: 3,
-            title: 'envy',
+            title: 'Envy',
             weight: 3
         }, {
-            id: 4,
-            title: 'inspiration',
+            title: 'Inspiration',
             weight: 1
         }]
     };
@@ -35,6 +30,7 @@
 
     function controller(listConfigValue) {
         var vm = this;
+
 
         vm.$onInit = function () {
             // Assign text to the view model
@@ -45,27 +41,24 @@
             vm.increment = listConfigValue.increment;
         };
 
-        vm.increase = function (value) {
-            // console.debug('value ', value.weight);
-            if (!value || !value.weight || value <= vm.min) {
+
+        vm.decrease = function (value) {
+            if (!value || !value.weight || value.weight <= vm.min) {
                 return;
             }
             value.weight -= vm.increment;
-            // console.debug('value increased to ', value.weight);
             return value.weight;
         };
 
-        vm.decrease = function (value) {
-            // console.debug('value ', value);
-            if (!value || !value.weight || value >= vm.max) {
+
+        vm.increase = function (value) {
+            if (!value || !value.weight || value.weight >= vm.max) {
                 return;
             }
             value.weight += vm.increment;
-            // console.debug('value decreased to ', value.weight);
         };
 
     }
-
 
 
     angular

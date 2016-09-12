@@ -4,8 +4,8 @@
 <table>
     <thead>
         <tr>
-            <th>title</th>
-            <th>weight</th>
+            <th>Title</th>
+            <th>Weight</th>
             <th colspan="2"></th>
         </tr>
     </thead>
@@ -13,13 +13,13 @@
         <tr ng-repeat="i in vm.items track by $index">
             <td>{{ i.title }}</td>
             <td>
-                <weight-display weight="i.weight">^</weight-display>
+                <weight-display weight="i.weight">*</weight-display>
             </td>
             <td>
-                <span ng-click="vm.decrease(i)">-</span>
+                <a href ng-click="vm.decrease(i)">-</a>
             </td>
             <td>
-                <span ng-click="vm.increase(i)">+</span>
+                <a href ng-click="vm.increase(i)">+</a>
             </td>
         </tr>
     </tbody>
